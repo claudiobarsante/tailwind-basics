@@ -4,6 +4,7 @@ import { Cog, LifeBuoy, Search } from 'lucide-react';
 import MainNavigation from './MainNavigation';
 import NavItem from './MainNavigation/NavItem';
 import UsedSpaceWidget from './UsedSpaceWidget';
+import Profile from './Profile';
 
 export default function SideBar() {
   return (
@@ -28,8 +29,10 @@ export default function SideBar() {
           <NavItem title="Support" icon={LifeBuoy} />
           <NavItem title="Settings" icon={Cog} />
         </nav>
+        <UsedSpaceWidget />
+        <div className="h-px bg-zinc-200" />
+        <Profile />
       </div>
-      <UsedSpaceWidget />
     </aside>
   );
 }
