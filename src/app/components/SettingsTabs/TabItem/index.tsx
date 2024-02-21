@@ -1,6 +1,6 @@
 'use client';
 import * as Tabs from '@radix-ui/react-tabs';
-
+import { motion } from 'framer-motion';
 type TabItemProps = {
   value: string;
   title: string;
@@ -13,10 +13,16 @@ function TabItem({ value, title, isSelected = false }: TabItemProps) {
       className="relative px-1 pb-4 text-sm font-medium text-zinc-500 hover:text-violet-700 data-[state='active']:text-violet-700"
     >
       <span>{title}</span>
-      {isSelected && <div className="absolute -bottom-px left-0 right-0 h-0.5 bg-violet-700"></div>}
+      {isSelected && (
+        <motion.div
+          layoutId="activeTab"
+          className="absolute -bottom-px left-0 right-0 h-0.5 bg-violet-700"
+        ></motion.div>
+      )}
     </Tabs.Trigger>
   );
 }
+// -- layoutId could be anything...
 /*Radix Tab component has a data attribute called data-state indicating if the tab is active or not
 data-state="active" or data-state="inactive", so use data-[state] to work with the state*/
 /*
