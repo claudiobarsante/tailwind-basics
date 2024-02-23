@@ -8,6 +8,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      borderWidth: {
+        6: '6px'
+      },
+      colors: {
+        violet: {
+          25: '#fcfaff'
+        }
+      },
       gridTemplateColumns: {
         app: 'minmax(18rem,20rem) 1fr',
         profile: 'max-content 1fr max-content',
