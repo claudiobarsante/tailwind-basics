@@ -68,7 +68,7 @@ export default function Home() {
             <FileInput.Root className="flex items-start gap-5">
               <FileInput.ImagePreview />
               <FileInput.Trigger />
-              <FileInput.Control />
+              <FileInput.Control isMultiple={false} />
             </FileInput.Root>
           </div>
           <div className="grid grid-cols-form gap-3 pt-5">
@@ -103,7 +103,8 @@ export default function Home() {
             </label>
             <FileInput.Root>
               <FileInput.Trigger />
-              <FileInput.Control multiple />
+              <FileInput.FileList />
+              <FileInput.Control isMultiple={true} />
             </FileInput.Root>
           </div>
 
