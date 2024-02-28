@@ -1,7 +1,8 @@
-import { Mail, UploadCloud, User } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { Input } from './components/Input';
 import SettingsTabs from './components/SettingsTabs';
 import { FileInput } from './components/Form/FileInput';
+import Select from './components/Select';
 
 export default function Home() {
   return (
@@ -84,6 +85,7 @@ export default function Home() {
             <label htmlFor="contry" className="text-sm font-medium text-zinc-700">
               Country
             </label>
+            <Select />
           </div>
           <div className="grid grid-cols-form gap-3 pt-5">
             <label htmlFor="timezone" className="text-sm font-medium text-zinc-700">
