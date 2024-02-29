@@ -1,9 +1,10 @@
-import { Mail } from 'lucide-react';
+import { Bold, Italic, Link, List, ListOrdered, Mail } from 'lucide-react';
 import { FileInput } from './components/Form/FileInput';
 import { Input } from './components/Input';
 import Select from './components/Select';
 import SettingsTabs from './components/SettingsTabs';
 import SelectItem from './components/Select/SelectItem';
+import Textarea from './components/Textarea';
 
 export default function Home() {
   return (
@@ -105,6 +106,38 @@ export default function Home() {
               Bio
               <span className="mt-0.5 block text-sm text-zinc-500">Write a short introduction</span>
             </label>
+            <div className="space-y-3">
+              <div className="grid grid-cols-2 gap-3">
+                <Select placeholder="" defaultValue="normal">
+                  <SelectItem value="normal" defaultChecked text="Normal Text" />
+                  <SelectItem value="md" text="Markdown" />
+                </Select>
+                <div className="flex items-center gap-1">
+                  {/* strokeWidth = the thicness of the icon*/}
+                  <button type="button" className="rounded-md p-2 hover:bg-zinc-50">
+                    <Bold className="size-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+                  <button type="button" className="rounded-md p-2 hover:bg-zinc-50">
+                    <Italic className="size-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+                  <button type="button" className="rounded-md p-2 hover:bg-zinc-50">
+                    <Link className="size-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+                  <button type="button" className="rounded-md p-2 hover:bg-zinc-50">
+                    <List className="size-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+                  <button type="button" className="rounded-md p-2 hover:bg-zinc-50">
+                    <ListOrdered className="size-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+                </div>
+              </div>
+              <Textarea
+                id="bio"
+                defaultValue={
+                  "I'm a Product Designer based in Melbourne, Australia. I specialise in UX/UI design, brand strategy, and Webflow development."
+                }
+              />
+            </div>
           </div>
           <div className="grid grid-cols-form gap-3 pt-5">
             <label htmlFor="projects" className="text-sm font-medium text-zinc-700">
