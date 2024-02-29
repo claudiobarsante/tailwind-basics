@@ -20,12 +20,53 @@ const config: Config = {
         app: 'minmax(18rem,20rem) 1fr',
         profile: 'max-content 1fr max-content',
         form: 'minmax(7.5rem, 17.5rem) minmax(25rem, 1fr) minmax(0, 15rem)'
+      },
+      keyframes: {
+        slideDownAndFade: {
+          // starts with the element -2px above
+          from: { opacity: '0', transform: 'translateY(-2px)' },
+          // finishes with the element on it's original position
+          to: { opacity: '1', transform: 'translateY(0px)' }
+        },
+        slideUpAndFade: {
+          from: { opacity: '1' },
+          to: { opacity: '0' }
+        }
+      },
+
+      animation: {
+        slideDownAndFade: 'slideDownAndFade 0.4s cubic-bezier(0.16, 1, 0.3,1)',
+        slideUpAndFade: 'slideUpAndFade 1s linear'
       }
     }
   },
   plugins: []
 };
 export default config;
+/*
+The CSS `cubic-bezier()` function is used to define a cubic Bézier curve for timing functions in CSS animations or transitions. This function allows you to create custom easing curves for animations, specifying how the animation progresses over time.
+
+The `cubic-bezier()` function takes four parameters, each representing a control point on the curve. These parameters define the shape of the curve:
+
+1. The first parameter (`0.16` in your example) represents the X coordinate of the first control point.
+2. The second parameter (`1` in your example) represents the Y coordinate of the first control point.
+3. The third parameter (`0.3` in your example) represents the X coordinate of the second control point.
+4. The fourth parameter (`1` in your example) represents the Y coordinate of the second control point.
+
+These control points determine how the animation progresses over time. The values of these parameters typically range from 0 to 1, inclusive. They define how the animation accelerates or decelerates during its duration.
+
+In your example `cubic-bezier(0.16, 1, 0.3, 1)`, the timing function starts with a relatively gradual acceleration, then moves into a more linear progression, and finally slows down gradually at the end. This timing function could be used, for example, to create a smooth and natural-feeling animation effect. */
+
+/*
+The CSS transform property is used to modify the appearance of an element in various ways, such as scaling, rotating, skewing, or translating it. In the context of your example, transform: 'translateY(-2px)', it's applying a translation along the vertical (Y) axis.
+
+Let's break it down:
+
+transform: This is the CSS property responsible for transforming the element.
+'translateY(-2px)': This is a value applied to the transform property. It specifies a translation along the Y-axis. The -2px indicates that the element will be moved 2 pixels upward (negative direction) relative to its initial position.
+So, when you apply transform: 'translateY(-2px)' to an element in CSS, it will shift that element 2 pixels upwards from its original position.
+
+*/
 
 /*
 This CSS property `grid-template-columns` is used in CSS Grid layouts to define the columns of a grid container. 
