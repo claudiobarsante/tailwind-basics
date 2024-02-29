@@ -134,7 +134,7 @@ export default function Home() {
               <Textarea
                 id="bio"
                 defaultValue={
-                  "I'm a Product Designer based in Melbourne, Australia. I specialise in UX/UI design, brand strategy, and Webflow development."
+                  "I'm a Product Designer based in Melbourne, Australia. I specialized in UX/UI design, brand strategy, and Webflow development."
                 }
               />
             </div>
