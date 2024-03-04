@@ -107,21 +107,21 @@ export default function Home() {
                 </Select>
                 <div className="flex items-center gap-1">
                   {/* strokeWidth = the thicness of the icon*/}
-                  <button type="button" className="rounded-md p-2 hover:bg-zinc-50">
+                  <Button type="button" variant="ghost">
                     <Bold className="size-4 text-zinc-500" strokeWidth={3} />
-                  </button>
-                  <button type="button" className="rounded-md p-2 hover:bg-zinc-50">
+                  </Button>
+                  <Button type="button" variant="ghost">
                     <Italic className="size-4 text-zinc-500" strokeWidth={3} />
-                  </button>
-                  <button type="button" className="rounded-md p-2 hover:bg-zinc-50">
+                  </Button>
+                  <Button type="button" variant="ghost">
                     <Link className="size-4 text-zinc-500" strokeWidth={3} />
-                  </button>
-                  <button type="button" className="rounded-md p-2 hover:bg-zinc-50">
+                  </Button>
+                  <Button type="button" variant="ghost">
                     <List className="size-4 text-zinc-500" strokeWidth={3} />
-                  </button>
-                  <button type="button" className="rounded-md p-2 hover:bg-zinc-50">
+                  </Button>
+                  <Button type="button" variant="ghost">
                     <ListOrdered className="size-4 text-zinc-500" strokeWidth={3} />
-                  </button>
+                  </Button>
                 </div>
               </div>
               <Textarea
