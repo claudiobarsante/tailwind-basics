@@ -5,13 +5,12 @@ import Select from './components/Select';
 import SettingsTabs from './components/SettingsTabs';
 import SelectItem from './components/Select/SelectItem';
 import Textarea from './components/Textarea';
+import Button from './components/Button';
 
 export default function Home() {
   return (
     <>
       <h1 className="text-3xl font-medium text-zinc-900">Settings</h1>
-
-      <SettingsTabs />
 
       <main className="mt-8 flex flex-col">
         <header className="flex items-center justify-between border-b border-zinc-200 pb-5">
@@ -20,18 +19,12 @@ export default function Home() {
             <span className="text-sm  text-zinc-500">Update your photo and personal details here</span>
           </div>
           <div className="ml-auto flex gap-3">
-            <button
-              type="button"
-              className="rounded-lg border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 shadow-sm hover:bg-zinc-50"
-            >
+            <Button variant="outline" type="button">
               Cancel
-            </button>
-            <button
-              type="submit"
-              className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-violet-700"
-            >
+            </Button>
+            <Button variant="primary" type="submit" form="settings-form">
               Save
-            </button>
+            </Button>
           </div>
         </header>
 
@@ -152,18 +145,12 @@ export default function Home() {
           </div>
 
           <div className="flex items-center justify-end gap-2 pt-5">
-            <button
-              type="button"
-              className="rounded-lg border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 shadow-sm hover:bg-zinc-50"
-            >
+            <Button variant="outline" type="button">
               Cancel
-            </button>
-            <button
-              type="submit"
-              className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-violet-700"
-            >
+            </Button>
+            <Button variant="primary" type="submit" form="settings-form">
               Save
-            </button>
+            </Button>
           </div>
         </form>
       </main>
