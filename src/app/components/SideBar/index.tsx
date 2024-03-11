@@ -15,7 +15,7 @@ export default function SideBar() {
     // - Control the vertical space between elements using the space-y-{amount} utilities
     // <aside className="min-h-screen space-y-6 border-r border-zinc-200 px-5 py-8">
     // -- could use bottom-0 to fill the entire screen height
-    <Collapsible.Root className="fixed left-0 right-0 top-0 z-20 flex flex-col gap-6 border-b border-zinc-200 bg-white p-4 data-[state=open]:bottom-0 lg:right-auto  lg:w-80 lg:border-r lg:px-5 lg:py-8 lg:data-[state=closed]:bottom-0">
+    <Collapsible.Root className="fixed left-0 right-0 top-0 z-20 flex flex-col gap-6 border-b border-zinc-200 bg-white p-4 data-[state=open]:bottom-0 lg:right-auto lg:w-80 lg:border-r  lg:px-5 lg:py-8 lg:data-[state=closed]:bottom-0 dark:border-zinc-800 dark:bg-zinc-900">
       <div className="flex items-center justify-between">
         <Logo />
         <Collapsible.Trigger asChild className="lg:hidden">
